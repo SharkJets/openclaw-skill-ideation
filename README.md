@@ -13,21 +13,30 @@ Turn messy, stream-of-consciousness ideas into:
 
 ## Installation
 
-### Option 1: Symlink (for development)
+### Option 1: Clone + symlink (recommended)
 
 ```bash
-ln -s /path/to/openclaw-ideation ~/.openclaw/skills/ideation
+git clone https://github.com/SharkJets/openclaw-skill-ideation.git ~/.openclaw/skills-src/openclaw-skill-ideation
+ln -s ~/.openclaw/skills-src/openclaw-skill-ideation/ideation ~/.openclaw/skills/ideation
 ```
 
-### Option 2: Copy to skills directory
+### Option 2: degit (no git history)
 
 ```bash
-cp -r /path/to/openclaw-ideation ~/.openclaw/skills/ideation
+npx degit SharkJets/openclaw-skill-ideation/ideation ~/.openclaw/skills/ideation
 ```
 
-### Option 3: Add to workspace
+### Option 3: Manual clone
 
-Copy the `ideation/` folder to your project's skills directory (if using workspace-local skills).
+```bash
+git clone https://github.com/SharkJets/openclaw-skill-ideation.git /tmp/oc-ideation
+cp -r /tmp/oc-ideation/ideation ~/.openclaw/skills/
+rm -rf /tmp/oc-ideation
+```
+
+### Option 4: Workspace-local
+
+Clone or copy the `ideation/` folder into your project's `skills/` directory for per-project use.
 
 ## Usage
 
