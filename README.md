@@ -41,6 +41,22 @@ rm -rf /tmp/oc-ideation
 
 Clone or copy the `ideation/` folder into your project's `skills/` directory for per-project use.
 
+### After Installation
+
+OpenClaw snapshots skills when a session starts. After installing, **start a new session** for the skill to be available. A gateway restart alone isn't enough — you need a fresh session.
+
+Alternatively, enable the skills watcher for hot-reload in `~/.openclaw/openclaw.json`:
+
+```json
+{
+  "skills": {
+    "load": {
+      "watch": true
+    }
+  }
+}
+```
+
 ## Usage
 
 Just dump your messy ideas:
