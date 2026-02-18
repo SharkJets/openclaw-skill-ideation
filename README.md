@@ -16,6 +16,7 @@ Turn messy, stream-of-consciousness ideas into:
 ### Option 1: Clone + symlink (recommended)
 
 ```bash
+mkdir -p ~/.openclaw/skills ~/.openclaw/skills-src
 git clone https://github.com/SharkJets/openclaw-skill-ideation.git ~/.openclaw/skills-src/openclaw-skill-ideation
 ln -s ~/.openclaw/skills-src/openclaw-skill-ideation/ideation ~/.openclaw/skills/ideation
 ```
@@ -23,12 +24,14 @@ ln -s ~/.openclaw/skills-src/openclaw-skill-ideation/ideation ~/.openclaw/skills
 ### Option 2: degit (no git history)
 
 ```bash
+mkdir -p ~/.openclaw/skills
 npx degit SharkJets/openclaw-skill-ideation/ideation ~/.openclaw/skills/ideation
 ```
 
 ### Option 3: Manual clone
 
 ```bash
+mkdir -p ~/.openclaw/skills
 git clone https://github.com/SharkJets/openclaw-skill-ideation.git /tmp/oc-ideation
 cp -r /tmp/oc-ideation/ideation ~/.openclaw/skills/
 rm -rf /tmp/oc-ideation
